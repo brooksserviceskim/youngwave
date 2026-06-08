@@ -77,7 +77,11 @@ h1.display{font-size:clamp(40px,6vw,78px);line-height:.98;font-weight:900;letter
 h1.display em{font-style:normal;color:var(--yellow)}
 h1.display .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.lead{margin-top:24px;font-size:clamp(15px,1.6vw,18px);color:var(--muted-2);max-width:560px}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:26px}
+.hc-step{font-size:12.5px;font-weight:800;color:#EDEDF4;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:7px 13px;border-radius:999px;white-space:nowrap}
+.hc-arr{color:var(--yellow);font-weight:900;font-size:13px}
+.hc-plus{font-size:12px;font-weight:800;color:#111;background:var(--yellow);padding:7px 13px;border-radius:999px;white-space:nowrap}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 /* hero video */
 .hero-video{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line-2);aspect-ratio:9/10;background:#0b0b0f;box-shadow:0 40px 90px rgba(0,0,0,.6)}
 .hero-video .vthumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.85}
@@ -311,6 +315,33 @@ footer{border-top:1px solid var(--line);margin-top:0;padding:60px 0 40px;backgro
 .cl-tile.noimg{background:var(--panel);border:1px solid var(--line)}
 .cl-tile.noimg span{font-weight:800;color:#cfd2e0;font-size:13px;text-align:center;line-height:1.3}
 
+/* ---------- One-stop solution (3-step spine) ---------- */
+.sol{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sol-step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:.28s}
+.sol-step:hover{transform:translateY(-5px);border-color:var(--yellow);background:var(--panel-2)}
+.sol-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sol-no{font-size:30px;font-weight:900;color:var(--yellow);line-height:1}
+.sol-ico{width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;font-size:22px}
+.sol-step h3{font-size:21px;font-weight:900;letter-spacing:-.01em}
+.sol-tag{margin-top:6px;color:var(--muted-2);font-size:13.5px;font-weight:600}
+.sol-step ul{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:10px}
+.sol-step li{position:relative;padding-left:22px;font-size:14px;color:#E2E2EA;font-weight:600}
+.sol-step li::before{content:"✓";position:absolute;left:0;color:var(--yellow);font-weight:900}
+.sol-arrow{position:absolute;right:-13px;top:48px;z-index:2;color:var(--yellow);font-size:24px;font-weight:900}
+
+/* ---------- Partnership proposal ---------- */
+.prop-grid{display:grid;grid-template-columns:1fr auto 1.2fr;gap:20px;align-items:stretch;max-width:1000px;margin:0 auto}
+.prop-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.prop-card h3{font-size:17px;font-weight:900;margin-bottom:18px;color:#fff}
+.prop-pills{display:flex;flex-wrap:wrap;gap:10px}
+.prop-pill{font-size:14px;font-weight:700;color:#D7D7E0;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:11px 18px;border-radius:999px}
+.prop-pill.hot{background:var(--yellow);color:#111;border-color:transparent}
+.prop-offer{background:linear-gradient(180deg,rgba(255,212,0,.06),transparent),var(--panel);border-color:rgba(255,212,0,.25)}
+.prop-offer ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.prop-offer li{position:relative;padding-left:26px;font-size:14.5px;color:#E2E2EA;font-weight:600}
+.prop-offer li::before{content:"✓";position:absolute;left:0;color:var(--yellow);font-weight:900}
+.prop-arrow{display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:34px;font-weight:900}
+
 /* ---------- Why ---------- */
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:980px;margin:0 auto}
 .why-item{display:flex;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:.25s}
@@ -346,6 +377,10 @@ footer{border-top:1px solid var(--line);margin-top:0;padding:60px 0 40px;backgro
   .infl-grid{grid-template-columns:repeat(2,1fr)}
   .flag-grid{grid-template-columns:repeat(4,1fr);max-width:560px}
   .cl-logos{grid-template-columns:repeat(3,1fr)}
+  .sol{grid-template-columns:1fr}
+  .sol-arrow{display:none}
+  .prop-grid{grid-template-columns:1fr}
+  .prop-arrow{transform:rotate(90deg);font-size:28px}
   .why-grid{grid-template-columns:1fr}
   .profile{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
