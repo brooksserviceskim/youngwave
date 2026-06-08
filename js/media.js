@@ -99,13 +99,49 @@ const WHY = [
   {n:"01",t:{ko:"현지 전문성",en:"Local Expertise"},d:{ko:"베트남·아세안 시장에 대한 깊은 이해와 현지 네트워크.",en:"Deep understanding of Vietnam/ASEAN markets with a real local network."}},
   {n:"02",t:{ko:"셀럽·인플루언서 네트워크",en:"Celeb & Influencer Network"},d:{ko:"베트남 최상위 인플루언서·아티스트와의 독점 협업 채널.",en:"Exclusive access to Vietnam's top influencers and artists."}},
   {n:"03",t:{ko:"자체 제작 역량",en:"In-House Production"},d:{ko:"기획·촬영·연출·편집·디자인 전 과정을 자체 수행.",en:"Planning, filming, directing, editing and design — all in-house."}},
-  {n:"04",t:{ko:"한-베 이중 허브",en:"Korea–Vietnam Dual Hub"},d:{ko:"호찌민 본사 + 한국 지사로 양국 간 원활한 커뮤니케이션.",en:"HCMC HQ + Korea branch for seamless cross-border communication."}},
+  {n:"04",t:{ko:"한-베 이중 허브",en:"Korea–Vietnam Dual Hub"},d:{ko:"호치민 본사 + 한국 지사로 양국 간 원활한 커뮤니케이션.",en:"HCMC HQ + Korea branch for seamless cross-border communication."}},
   {n:"05",t:{ko:"검증된 실적",en:"Proven Track Record"},d:{ko:"정부 기관·글로벌 브랜드·K-POP 아티스트와의 성공 협업.",en:"Successful work with governments, global brands and K-pop artists."}},
   {n:"06",t:{ko:"베트남 인증 (화장품·식품)",en:"Vietnam Certification (Cosmetics·Food)"},d:{ko:"영웨이브 베트남 법인이 직접 화장품 신고(DAV)·식품 등록(VFA)을 진행해 합법 판매를 보장합니다. 수입·통관·라벨링까지 대행.",en:"Our Vietnam entity files cosmetic notifications (DAV) and food registrations (VFA) directly for legal sales — including import, customs and labeling."}},
   {n:"07",t:{ko:"현지 3PL 물류 연계",en:"Local 3PL Logistics"},d:{ko:"베트남 현지 한인 운영 3PL 물류사와 연계해 수입·통관·보관·배송까지 안정적으로 지원합니다.",en:"Connected with a Korean-run 3PL logistics partner in Vietnam for reliable import, customs, warehousing and delivery."}}
 ];
 
 const SOCIAL = {ig:"https://www.instagram.com/youngwavecreative/", yt:"https://www.youtube.com/@youngwave1399"};
+
+/* Hero full-stack chain (shown immediately in hero) */
+const CHAIN = [
+  {ko:"인플루언서",en:"Influencer"},
+  {ko:"콘텐츠 제작",en:"Content"},
+  {ko:"라이브커머스",en:"Live Commerce"},
+  {ko:"쇼핑몰 판매",en:"Mall Sales"},
+  {ko:"매출 정산",en:"Settlement"}
+];
+
+/* One-stop solution — CEO's 3-step structure (launch → branding → sell&scale) */
+const FLOW = [
+  {no:"01",ico:"🛂",t:{ko:"현지 진입",en:"Market Entry"},tag:{ko:"사업성 검토부터 인증·통관까지",en:"From feasibility to certification & customs"},
+   subs:{ko:["현지 사업성·시장성 검토","화장품·식품 성분 인증 (DAV·VFA)","제품 수출입·통관 대행"],en:["Market feasibility review","Cosmetic/food ingredient certification (DAV·VFA)","Import/export & customs clearance"]}},
+  {no:"02",ico:"✨",t:{ko:"현지 최적화 브랜딩",en:"Localized Branding"},tag:{ko:"원소스 멀티유즈 · 1셀럽 + 인플루언서 풀",en:"One-source multi-use · celeb + influencer pool"},
+   subs:{ko:["셀럽·메가 인플루언서 마케팅","콘텐츠 기획·제작 (원소스 멀티유즈)","언론·SNS 통합 홍보"],en:["Celebrity & mega-influencer marketing","Content production (one-source multi-use)","Press & social PR"]}},
+  {no:"03",ico:"💰",t:{ko:"유통·판매·수익화",en:"Sell & Scale"},tag:{ko:"팔고 · 보관·배송하고 · 정산까지",en:"Sell, store, ship and settle"},
+   subs:{ko:["라이브커머스·공동구매·쇼핑몰 운영","베트남 유통·3PL 물류 연계","매출 정산·C/S"],en:["Live commerce, group-buy & malls","Vietnam distribution & 3PL logistics","Revenue settlement & CS"]}}
+];
+
+/* Partnership proposal */
+const PROPOSE_BRANDS = [
+  {ko:"화장품 · 뷰티",en:"Cosmetics · Beauty",hot:true},
+  {ko:"식품 · F&B",en:"Food · F&B"},
+  {ko:"생활용품",en:"Household goods"},
+  {ko:"모바일 게임",en:"Mobile games"},
+  {ko:"전자기기",en:"Electronics"}
+];
+const PROPOSE_OFFER = [
+  {ko:"아세안 시장 진출 전략 설계",en:"ASEAN go-to-market strategy"},
+  {ko:"인플루언서·셀럽 캠페인",en:"Influencer & celebrity campaigns"},
+  {ko:"라이브커머스·공동구매 운영",en:"Live commerce & group-buy ops"},
+  {ko:"베트남 유통·3PL 물류 연계",en:"Vietnam distribution & 3PL logistics"},
+  {ko:"화장품·식품 인증 (DAV·VFA)",en:"Cosmetics/food certification (DAV·VFA)"},
+  {ko:"현지 팝업·오프라인 행사",en:"Local pop-ups & offline events"}
+];
 
 /* ASIA-wide network flags (Gushcloud-style) */
 const FLAGS = [
@@ -146,7 +182,11 @@ const I18N_EXTRA = {
     "proj.title":"주요 프로젝트","proj.sub":"드라마·뮤직비디오·관광 CF·글로벌 컨퍼런스까지, 결과로 증명합니다.",
     "clients.title":"클라이언트","clients.sub":"정부 기관부터 글로벌 미디어까지 신뢰받는 파트너.","clients.gov":"정부·지자체","clients.media":"방송·미디어","clients.ent":"엔터·프로덕션",
     "why.title":"왜 영웨이브인가","why.sub":"단순 캠페인 실행이 아닌, 아세안 시장의 전략적 파트너가 됩니다.",
-    "lead.title":"리더십 & 팀","lead.sub":"베트남 본사 16명 · 한국 지사 3명, 이중언어 전문가 팀."
+    "lead.title":"리더십 & 팀","lead.sub":"베트남 본사 16명 · 한국 지사 3명, 이중언어 전문가 팀.",
+    "ceo.b1":"동남아 셀럽·메가 인플루언서 네트워크 보유","ceo.b2":"한-아세안 통합 마케팅·콘텐츠 제작 전문","ceo.b3":"베트남 법인 운영 · 코스메틱 인증·유통 실무",
+    "hero.fs":"동남아 인플루언서 커머스 · 풀스택 컴퍼니","hero.chainplus":"+ 화장품 인증 · 통관 · 물류",
+    "sys.kicker":"ONE-STOP SOLUTION","sys.title":"베트남 런칭부터 스케일까지, 원스톱","sys.sub":"1셀럽 + 인플루언서 풀로 브랜드의 현지 진입 · 브랜딩 · 판매 · 수익화까지 하나의 흐름으로 완성합니다. 브랜드는 맡기기만 하세요.",
+    "prop.kicker":"PARTNERSHIP","prop.title":"그래서, 우리와 어떤 일을 함께할까요?","prop.sub":"브랜드를 알려주시면 아세안 진출 종합 솔루션을 제안드립니다.","prop.brands":"이런 브랜드와 함께합니다","prop.offer":"우리가 제공하는 것","prop.cta":"제휴 제안 받기"
   },
   en:{
     "hero.kicker":"ASIA INFLUENCE NETWORK",
@@ -162,7 +202,11 @@ const I18N_EXTRA = {
     "proj.title":"Key Projects","proj.sub":"From web dramas and music videos to tourism CFs and global conferences — proven by results.",
     "clients.title":"Clients","clients.sub":"Trusted by partners from government bodies to global media.","clients.gov":"Government","clients.media":"Media & Broadcast","clients.ent":"Entertainment & Production",
     "why.title":"Why Young Wave","why.sub":"Not just campaign execution — we become your strategic partner in ASEAN.",
-    "lead.title":"Leadership & Team","lead.sub":"16 in Vietnam HQ · 3 in Korea branch — a bilingual team of specialists."
+    "lead.title":"Leadership & Team","lead.sub":"16 in Vietnam HQ · 3 in Korea branch — a bilingual team of specialists.",
+    "ceo.b1":"An extensive network of SEA celebrities & mega-influencers","ceo.b2":"Specialists in Korea–ASEAN integrated marketing & content","ceo.b3":"Runs a Vietnam entity — hands-on cosmetics certification & distribution",
+    "hero.fs":"SEA INFLUENCER-COMMERCE · FULL-STACK COMPANY","hero.chainplus":"+ Certification · Customs · Logistics",
+    "sys.kicker":"ONE-STOP SOLUTION","sys.title":"From Vietnam launch to scale — one stop","sys.sub":"With one celebrity plus an influencer pool, we build your market entry, branding, sales and revenue in a single flow. Just hand it to us.",
+    "prop.kicker":"PARTNERSHIP","prop.title":"So, what can we build together?","prop.sub":"Tell us your brand — we'll propose a full ASEAN go-to-market solution.","prop.brands":"Brands we partner with","prop.offer":"What we provide","prop.cta":"Request a proposal"
   },
   vi:{
     "hero.kicker":"MẠNG LƯỚI ẢNH HƯỞNG CHÂU Á",

@@ -27,6 +27,9 @@ function applyI18n(){
   if(typeof renderProjects==="function")renderProjects();
   if(typeof renderClients==="function")renderClients();
   if(typeof renderWhy==="function")renderWhy();
+  if(typeof renderChain==="function")renderChain();
+  if(typeof renderFlow==="function")renderFlow();
+  if(typeof renderPropose==="function")renderPropose();
   if(typeof renderTeam==="function")renderTeam();
 }
 
@@ -72,7 +75,7 @@ function buildChrome(active){
         <div class="foot-col"><h5 data-i18n="foot.menu"></h5>
           ${links.map(k=>`<a href="${pages[k]}" data-i18n="nav.${k}"></a>`).join("")}</div>
         <div class="foot-col foot-contact"><h5 data-i18n="foot.contact"></h5>
-          <div class="fc"><span class="fc-name">조영아 · Duong Thi Huyen Tran</span><span class="fc-role">영웨이브 본사 대표</span><a href="mailto:youngwavecreative@gmail.com">youngwavecreative@gmail.com</a></div>
+          <div class="fc"><span class="fc-name">조영아 · Strella Young</span><span class="fc-role">영웨이브 본사 대표</span><a href="mailto:youngwavecreative@gmail.com">youngwavecreative@gmail.com</a></div>
           <div class="fc"><span class="fc-name">Brooks Kim · 김현우</span><span class="fc-role">한국 지사 · Brooks Global 대표</span><a href="mailto:brooksservices.kim@gmail.com">brooksservices.kim@gmail.com</a></div>
           <div class="fc"><span class="fc-name">Jenny Go · 고은주</span><span class="fc-role">한국 지사 · Brooks Global Sales Director</span><a href="mailto:jinniko7490@naver.com">jinniko7490@naver.com</a></div>
           <a class="fc-addr">HCMC · Vincom Center, District 1 &nbsp;/&nbsp; Incheon · Brooks Global (Korea)</a></div>
@@ -236,6 +239,37 @@ function renderInfluencers(){
   observeReveal();
 }
 
+/* ---------- Hero full-stack chain ---------- */
+function renderChain(){
+  const box=document.getElementById("heroChain");
+  if(!box||typeof CHAIN==="undefined")return;
+  const steps=CHAIN.map((c,i)=>`<span class="hc-step">${c[LANG]||c.en}</span>${i<CHAIN.length-1?'<span class="hc-arr">→</span>':''}`).join("");
+  box.innerHTML=steps+`<span class="hc-plus">${t("hero.chainplus")}</span>`;
+}
+
+/* ---------- Business system flow ---------- */
+function renderFlow(){
+  const box=document.getElementById("flowGrid");
+  if(!box||typeof FLOW==="undefined")return;
+  box.innerHTML=FLOW.map((s,i)=>`<div class="sol-step reveal">
+    <div class="sol-top"><span class="sol-no">${s.no}</span><span class="sol-ico">${s.ico}</span></div>
+    <h3>${s.t[LANG]||s.t.en}</h3>
+    <div class="sol-tag">${s.tag[LANG]||s.tag.en}</div>
+    <ul>${(s.subs[LANG]||s.subs.en).map(x=>`<li>${x}</li>`).join("")}</ul>
+    ${i<FLOW.length-1?'<span class="sol-arrow">→</span>':''}
+  </div>`).join("");
+  observeReveal();
+}
+
+/* ---------- Partnership proposal ---------- */
+function renderPropose(){
+  const b=document.getElementById("propBrands"),o=document.getElementById("propOffer");
+  if(b&&typeof PROPOSE_BRANDS!=="undefined")
+    b.innerHTML=PROPOSE_BRANDS.map(x=>`<span class="prop-pill${x.hot?' hot':''}">${x[LANG]||x.en}</span>`).join("");
+  if(o&&typeof PROPOSE_OFFER!=="undefined")
+    o.innerHTML=PROPOSE_OFFER.map(x=>`<li>${x[LANG]||x.en}</li>`).join("");
+}
+
 /* ---------- Team + Business (Brooks) ---------- */
 function renderTeam(){
   const box=document.getElementById("teamGrid");
@@ -277,6 +311,6 @@ function initForm(){
 /* ---------- Boot ---------- */
 document.addEventListener("DOMContentLoaded",()=>{
   buildChrome(document.body.dataset.page||"home");
-  renderFilters();renderInfluencers();renderFlags();renderReel();renderProjects();renderClients();renderWhy();renderTeam();buildHero();
+  renderFilters();renderInfluencers();renderFlags();renderReel();renderProjects();renderClients();renderWhy();renderChain();renderFlow();renderPropose();renderTeam();buildHero();
   applyI18n();initForm();observeReveal();
 });

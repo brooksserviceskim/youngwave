@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Young Wave Creative — Asia's Influence Network</title>
-<meta name="description" content="베트남·필리핀·태국을 비롯한 아시아 전역 인플루언서 풀로 한국 브랜드의 동남아 진출을 라이브커머스부터 공동구매·팝업까지.">
+<title>Young Wave Creative — SEA Influencer-Commerce Full-Stack Company</title>
+<meta name="description" content="1셀럽 + 인플루언서 풀로 브랜드의 베트남 진출을 런칭부터 스케일까지 — 현지 진입·인증·브랜딩·유통·판매까지 원스톱.">
 <link rel="icon" href="assets/youngwave-logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,9 +17,10 @@
 <section class="hero wrap">
   <div class="hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span><span data-i18n="hero.kicker"></span></span>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="hero.fs"></span></span>
       <h1 class="display"><span data-i18n="hero.title1"></span> <em data-i18n="hero.title2"></em></h1>
       <p class="lead" data-i18n="hero.lead"></p>
+      <div class="hero-chain" id="heroChain"></div>
       <div class="hero-cta">
         <a class="btn btn-y" href="influencers.html" data-i18n="cta.explore"></a>
         <a class="btn btn-ghost" href="contact.html" data-i18n="cta.brand"></a>
@@ -49,13 +50,20 @@
   <span data-i18n="marquee"></span><span data-i18n="marquee"></span>
 </div></div>
 
-<!-- NETWORK -->
-<section class="sec netwrap"><div class="wrap">
-  <div class="sec-head reveal"><div class="kicker" data-i18n="hero.kicker"></div>
-    <h2 data-i18n="net.title"></h2><p data-i18n="net.sub"></p></div>
-  <div class="net-num reveal">12 <span style="font-size:.34em;color:#fff;font-weight:700" data-i18n="net.count"></span></div>
-  <div class="flag-grid" id="flagGrid"></div>
-</div></section>
+<!-- ① ONE-STOP SOLUTION (3-step spine) -->
+<section class="sec wrap">
+  <div class="sec-head reveal"><div class="kicker" data-i18n="sys.kicker"></div>
+    <h2 data-i18n="sys.title"></h2><p data-i18n="sys.sub"></p></div>
+  <div class="sol" id="flowGrid"></div>
+</section>
+
+<!-- ② INFLUENCER POOL (핵심 엔진) -->
+<section class="sec wrap">
+  <div class="sec-head reveal"><div class="kicker" data-i18n="home.infl.title"></div>
+    <h2 data-i18n="home.infl.sub"></h2></div>
+  <div class="infl-grid" id="inflGrid" data-limit="8"></div>
+  <div class="center" style="margin-top:34px"><a class="btn btn-y" href="influencers.html" data-i18n="cta.explore"></a></div>
+</section>
 
 <!-- STATS -->
 <section class="sec wrap">
@@ -67,21 +75,29 @@
   </div>
 </section>
 
-<!-- OUR CONTENT -->
+<!-- ③ OUR CONTENT (원소스 멀티유즈 증명) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker">OUR CONTENT</div>
     <h2 data-i18n="content.title"></h2><p data-i18n="content.sub"></p></div>
   <div class="reel" id="reelGrid"></div>
 </section>
 
-<!-- KEY PROJECTS -->
+<!-- KEY PROJECTS (실적) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="proj.title"></div>
     <h2 data-i18n="proj.title"></h2><p data-i18n="proj.sub"></p></div>
   <div class="proj-grid" id="projGrid"></div>
 </section>
 
-<!-- CAPABILITIES -->
+<!-- NETWORK (아시아 커버리지) -->
+<section class="sec netwrap"><div class="wrap">
+  <div class="sec-head reveal"><div class="kicker" data-i18n="hero.kicker"></div>
+    <h2 data-i18n="net.title"></h2><p data-i18n="net.sub"></p></div>
+  <div class="net-num reveal">12 <span style="font-size:.34em;color:#fff;font-weight:700" data-i18n="net.count"></span></div>
+  <div class="flag-grid" id="flagGrid"></div>
+</div></section>
+
+<!-- CAPABILITIES (서비스 상세) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="home.svc.title"></div>
     <h2 data-i18n="home.svc.sub"></h2></div>
@@ -96,15 +112,7 @@
   <div class="center" style="margin-top:30px"><a class="btn btn-ghost" href="services.html" data-i18n="nav.services"></a></div>
 </section>
 
-<!-- INFLUENCERS -->
-<section class="sec wrap">
-  <div class="sec-head reveal"><div class="kicker" data-i18n="home.infl.title"></div>
-    <h2 data-i18n="home.infl.sub"></h2></div>
-  <div class="infl-grid" id="inflGrid" data-limit="8"></div>
-  <div class="center" style="margin-top:34px"><a class="btn btn-y" href="influencers.html" data-i18n="cta.explore"></a></div>
-</section>
-
-<!-- PARTNERS -->
+<!-- PARTNERS (관계사 인프라) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="home.partner.title"></div>
     <h2 data-i18n="home.partner.sub"></h2></div>
@@ -128,18 +136,36 @@
   </div>
 </section>
 
-<!-- CLIENTS -->
+<!-- CLIENTS (신뢰) -->
 <section class="sec netwrap"><div class="wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="clients.title"></div>
     <h2 data-i18n="clients.title"></h2><p data-i18n="clients.sub"></p></div>
   <div class="cl-wrap" id="clientsBox"></div>
 </div></section>
 
-<!-- WHY YOUNG WAVE -->
+<!-- WHY (차별점: 인증·물류) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="why.title"></div>
     <h2 data-i18n="why.title"></h2><p data-i18n="why.sub"></p></div>
   <div class="why-grid" id="whyGrid"></div>
+</section>
+
+<!-- ④ PARTNERSHIP PROPOSAL (그래서 함께) -->
+<section class="sec wrap">
+  <div class="sec-head reveal"><div class="kicker" data-i18n="prop.kicker"></div>
+    <h2 data-i18n="prop.title"></h2><p data-i18n="prop.sub"></p></div>
+  <div class="prop-grid">
+    <div class="prop-card reveal">
+      <h3 data-i18n="prop.brands"></h3>
+      <div class="prop-pills" id="propBrands"></div>
+    </div>
+    <div class="prop-arrow reveal">→</div>
+    <div class="prop-card prop-offer reveal">
+      <h3 data-i18n="prop.offer"></h3>
+      <ul id="propOffer"></ul>
+    </div>
+  </div>
+  <div class="center" style="margin-top:30px"><a class="btn btn-y" href="contact.html" data-i18n="prop.cta"></a></div>
 </section>
 
 <!-- CTA -->
