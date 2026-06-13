@@ -20,7 +20,6 @@
       <span class="eyebrow"><span class="dot"></span><span data-i18n="hero.fs"></span></span>
       <h1 class="display"><span data-i18n="hero.title1"></span> <em data-i18n="hero.title2"></em></h1>
       <p class="lead" data-i18n="hero.lead"></p>
-      <div class="hero-chain" id="heroChain"></div>
       <div class="hero-cta">
         <a class="btn btn-y" href="influencers.html" data-i18n="cta.explore"></a>
         <a class="btn btn-ghost" href="contact.html" data-i18n="cta.brand"></a>
@@ -50,18 +49,28 @@
   <span data-i18n="marquee"></span><span data-i18n="marquee"></span>
 </div></div>
 
-<!-- ① ONE-STOP SOLUTION (3-step spine) -->
+<!-- ① ONE-STOP PIPELINE (7-step, matches CEO infographic) -->
 <section class="sec wrap">
-  <div class="sec-head reveal"><div class="kicker" data-i18n="sys.kicker"></div>
-    <h2 data-i18n="sys.title"></h2><p data-i18n="sys.sub"></p></div>
-  <div class="sol" id="flowGrid"></div>
+  <div class="sec-head reveal" style="max-width:880px"><div class="kicker" data-i18n="sys.kicker"></div>
+    <h2 data-i18n="sys.title"></h2></div>
+  <div class="sys-points reveal">
+    <span><b>🌐</b><span data-i18n="sys.p1"></span></span>
+    <span><b>🎯</b><span data-i18n="sys.p2"></span></span>
+    <span><b>📈</b><span data-i18n="sys.p3"></span></span>
+  </div>
+  <div class="pipe" id="flowGrid"></div>
+  <div class="pipe-band reveal">
+    <span class="pb-ico">🔗</span>
+    <span class="pb-txt" data-i18n="sys.band"></span>
+    <span class="pb-arrow">→</span>
+  </div>
 </section>
 
 <!-- ② INFLUENCER POOL (핵심 엔진) -->
 <section class="sec wrap">
   <div class="sec-head reveal"><div class="kicker" data-i18n="home.infl.title"></div>
     <h2 data-i18n="home.infl.sub"></h2></div>
-  <div class="infl-grid" id="inflGrid" data-limit="8"></div>
+  <div class="infl-grid" id="inflGrid" data-limit="10"></div>
   <div class="center" style="margin-top:34px"><a class="btn btn-y" href="influencers.html" data-i18n="cta.explore"></a></div>
 </section>
 
@@ -87,6 +96,15 @@
   <div class="sec-head reveal"><div class="kicker" data-i18n="proj.title"></div>
     <h2 data-i18n="proj.title"></h2><p data-i18n="proj.sub"></p></div>
   <div class="proj-grid" id="projGrid"></div>
+</section>
+
+<!-- PROJECT HISTORY (auto-scroll gallery) -->
+<section class="sec" id="history">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker" data-i18n="hist.kicker"></div>
+      <h2 data-i18n="hist.title"></h2><p data-i18n="hist.sub"></p></div>
+  </div>
+  <div class="hist-marquee" id="histMarquee" aria-label="Project history"></div>
 </section>
 
 <!-- NETWORK (아시아 커버리지) -->
@@ -179,5 +197,6 @@
 <footer></footer>
 <script src="js/data.js"></script>
 <script src="js/media.js"></script>
+<script src="js/history-data.js"></script>
 <script src="js/app.js"></script>
 </body></html>
