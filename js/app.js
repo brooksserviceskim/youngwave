@@ -35,8 +35,8 @@ function applyI18n(){
 
 /* ---------- chrome (nav + footer) ---------- */
 function buildChrome(active){
-  const links=["home","influencers","services","history","about","contact"];
-  const pages={home:"index.html",influencers:"influencers.html",services:"services.html",history:"index.html#history",about:"about.html",contact:"contact.html"};
+  const links=["home","influencers","services","studio","history","about","contact"];
+  const pages={home:"index.html",influencers:"influencers.html",services:"services.html",studio:"index.html#studio",history:"index.html#history",about:"about.html",contact:"contact.html"};
   const navLinks=links.map(k=>`<a href="${pages[k]}" class="${k===active?'active':''}" data-i18n="nav.${k}"></a>`).join("");
   const langOpts=LANGS.map(l=>`<option value="${l.code}" ${l.code===LANG?'selected':''}>${l.label}</option>`).join("");
   const header=document.querySelector("header.nav");
