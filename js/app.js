@@ -35,8 +35,8 @@ function applyI18n(){
 
 /* ---------- chrome (nav + footer) ---------- */
 function buildChrome(active){
-  const links=["home","influencers","services","about","contact"];
-  const pages={home:"index.html",influencers:"influencers.html",services:"services.html",about:"about.html",contact:"contact.html"};
+  const links=["home","influencers","services","history","about","contact"];
+  const pages={home:"index.html",influencers:"influencers.html",services:"services.html",history:"index.html#history",about:"about.html",contact:"contact.html"};
   const navLinks=links.map(k=>`<a href="${pages[k]}" class="${k===active?'active':''}" data-i18n="nav.${k}"></a>`).join("");
   const langOpts=LANGS.map(l=>`<option value="${l.code}" ${l.code===LANG?'selected':''}>${l.label}</option>`).join("");
   const header=document.querySelector("header.nav");
@@ -189,9 +189,7 @@ function platHtml(p){return p.map(x=>`<a href="${x.u}" target="_blank" rel="noop
 function slugify(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");}
 function imgSources(inf,m){
   const local="assets/influencers/"+slugify(inf.name)+".jpg";
-  // YouTube avatars are reliable → use directly (local still allowed as override)
-  if(m.img && m.img.indexOf("yt3.googleusercontent")>-1) return [m.img,local];
-  // Others: local override first, then unavatar public service, then monogram (on exhaust)
+  // Local provided photo always wins, then YouTube avatar / unavatar, then monogram
   const srcs=[local];
   if(m.img) srcs.push(m.img);
   return srcs;
@@ -251,12 +249,12 @@ function renderChain(){
 function renderFlow(){
   const box=document.getElementById("flowGrid");
   if(!box||typeof FLOW==="undefined")return;
-  box.innerHTML=FLOW.map((s,i)=>`<div class="sol-step reveal">
-    <div class="sol-top"><span class="sol-no">${s.no}</span><span class="sol-ico">${s.ico}</span></div>
-    <h3>${s.t[LANG]||s.t.en}</h3>
-    <div class="sol-tag">${s.tag[LANG]||s.tag.en}</div>
-    <ul>${(s.subs[LANG]||s.subs.en).map(x=>`<li>${x}</li>`).join("")}</ul>
-    ${i<FLOW.length-1?'<span class="sol-arrow">→</span>':''}
+  box.innerHTML=FLOW.map((s,i)=>`<div class="pl-step reveal">
+    <div class="pl-no">${s.no}</div>
+    <div class="pl-ico">${s.ico}</div>
+    <h4>${s.t[LANG]||s.t.en}</h4>
+    <p>${s.d[LANG]||s.d.en}</p>
+    ${i<FLOW.length-1?'<span class="pl-arrow">›</span>':''}
   </div>`).join("");
   observeReveal();
 }
@@ -290,6 +288,16 @@ function renderTeam(){
   }
 }
 
+/* ---------- Project history marquee ---------- */
+function renderHistory(){
+  const box=document.getElementById("histMarquee");
+  if(!box||typeof HISTORY==="undefined")return;
+  const card=h=>`<figure class="hist-item"><img src="assets/history/${h.f}" alt="${h.t}" loading="lazy"><figcaption class="hist-cap">${h.t}</figcaption></figure>`;
+  const set=HISTORY.map(card).join("");
+  // one track with the set duplicated → translateX(-50%) = exactly one set width = seamless loop
+  box.innerHTML=`<div class="hist-track">${set}${set}</div>`;
+}
+
 /* ---------- Reveal ---------- */
 let _io;
 function observeReveal(){
@@ -311,6 +319,6 @@ function initForm(){
 /* ---------- Boot ---------- */
 document.addEventListener("DOMContentLoaded",()=>{
   buildChrome(document.body.dataset.page||"home");
-  renderFilters();renderInfluencers();renderFlags();renderReel();renderProjects();renderClients();renderWhy();renderChain();renderFlow();renderPropose();renderTeam();buildHero();
+  renderFilters();renderInfluencers();renderFlags();renderReel();renderProjects();renderHistory();renderClients();renderWhy();renderChain();renderFlow();renderPropose();renderTeam();buildHero();
   applyI18n();initForm();observeReveal();
 });
