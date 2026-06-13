@@ -29,22 +29,24 @@ const MEDIA = {
 
 /* Hero reel — Young Wave's OWN produced content (muted autoplay, rotating) */
 const REEL = [
-  {name:"Taste of Korea",     sub:"Vị ngon Hàn Quốc", vid:"R0Wq_BrXE7s"},
-  {name:"수상한 한류스타 OST", sub:"TƯỞNG LÀ MƠ · Hoàng Yến Chibi", vid:"LZ9t6g-4DwM"},
-  {name:"Son Tung M-TP",      sub:"Nơi Này Có Anh · 제주도 로케이션", vid:"FN7ALfpGxiI"},
-  {name:"Winter of Korea",    sub:"Mùa Đông Hàn Quốc", vid:"fAkyGDWzsvY"},
-  {name:"강원도 관광 CF",      sub:"True Winter in Gangwon-do", vid:"LxV1l6SaIFM"},
-  {name:"Young Wave Creative",sub:"Korea–Vietnam Original", vid:"zvXp6jPPxQE"}
+  {name:"수상한 한류스타 OST 제작", sub:"성훈 × 황옌치비 · 한-베 웹드라마", vid:"R0Wq_BrXE7s"},
+  {name:"Son Tung M-TP · 한국 로케 MV", sub:"베트남 1위 가수 · 한국 언론 보도", vid:"FN7ALfpGxiI"},
+  {name:"강원도 관광 홍보 CF", sub:"Arirang · 베트남 인기 스타", vid:"VP0xJZlm5zU"},
+  {name:"한-베 웹드라마 OST MV", sub:"TƯỞNG LÀ MƠ · Hoàng Yến Chibi", vid:"LZ9t6g-4DwM"},
+  {name:"강원도 글로벌 관광객 유치 CF", sub:"Arirang · Somewhere Like Drama", vid:"DaENP8h_PLg"},
+  {name:"배우 성훈 남주 확정 인터뷰", sub:"수상한 한류스타 · Korea–Vietnam", vid:"zvXp6jPPxQE"}
 ];
 
-/* Produced content cards ("Our Content") */
+/* Produced content cards ("Our Content") — accurate project labels */
 const CONTENT = [
-  {vid:"R0Wq_BrXE7s", t:"Taste of Korea 🍜", s:"Vị ngon Hàn Quốc · 음식·라이프스타일"},
-  {vid:"fAkyGDWzsvY", t:"Winter of Korea ❄️", s:"Mùa Đông Hàn Quốc · 관광·강원도"},
-  {vid:"LZ9t6g-4DwM", t:"수상한 한류스타 OST 🎵", s:"TƯỞNG LÀ MƠ · Hoàng Yến Chibi"},
-  {vid:"24UrmFwpSRc", t:"My Secret Star OST 🎤", s:"수상한 한류스타 · Korean Version"},
-  {vid:"FN7ALfpGxiI", t:"Son Tung M-TP MV 🌊", s:"Nơi Này Có Anh · 제주도"},
-  {vid:"zvXp6jPPxQE", t:"Young Wave Creative", s:"Korea–Vietnam Original Content"}
+  {vid:"R0Wq_BrXE7s", t:"수상한 한류스타 OST 제작", s:"성훈 × 황옌치비 · 한-베 웹드라마"},
+  {vid:"LZ9t6g-4DwM", t:"한-베 웹드라마 OST MV 제작", s:"TƯỞNG LÀ MƠ · Hoàng Yến Chibi"},
+  {vid:"VP0xJZlm5zU", t:"강원도 관광 홍보 CF", s:"Arirang · 베트남 인기 스타 (Somewhere Like Drama 1)"},
+  {vid:"DaENP8h_PLg", t:"강원도 글로벌 관광객 유치 CF", s:"Arirang · Somewhere Like Drama 2"},
+  {vid:"FN7ALfpGxiI", t:"Son Tung M-TP · 한국 로케 MV", s:"베트남 1위 가수 · 한국 언론 보도"},
+  {vid:"24UrmFwpSRc", t:"My Secret Star OST (한국어)", s:"수상한 한류스타 · Korean Version"},
+  {vid:"fAkyGDWzsvY", t:"Winter of Korea", s:"한국 겨울 라이프스타일 콘텐츠"},
+  {vid:"zvXp6jPPxQE", t:"배우 성훈 남주 확정 인터뷰", s:"수상한 한류스타 · Korea–Vietnam"}
 ];
 
 /* Key projects (images hot-linked from the official site) */
@@ -61,7 +63,7 @@ const PROJECTS = [
    meta:"Naver V LIVE", url:""},
   {img:IMG+"gangwon-influencers.png", tag:"Tourism CF · 2019", t:"Gangwon-do · 아세안 관광 CF",
    d:{ko:"태국·필리핀·베트남 인플루언서 초청, 강원도 관광 CF 5편 제작 · 아리랑TV·HTV 방영.",en:"Thai·Filipino·Vietnamese influencers invited; 5 Gangwon tourism CFs produced, aired on Arirang TV·HTV."},
-   meta:"5 CFs · TH·PH·VN", url:"https://www.youtube.com/watch?v=LxV1l6SaIFM"},
+   meta:"5 CFs · TH·PH·VN", url:"https://www.youtube.com/watch?v=VP0xJZlm5zU"},
   {img:IMG+"iisf2019.png", tag:"Festival · 2019", t:"IISF 2019 · Incheon",
    d:{ko:"인천 국제 1인 미디어 페스티벌 베트남 총괄. ViruSs·JACK·K-ICM·H&M CHANNEL 초청·한-베 언론 PR.",en:"Led Vietnam ops for Incheon Intl Creator Festival. Invited ViruSs·JACK·K-ICM·H&M Channel; KR–VN press PR."},
    meta:"Incheon · KR–VN", url:""},
@@ -116,14 +118,15 @@ const CHAIN = [
   {ko:"매출 정산",en:"Settlement"}
 ];
 
-/* One-stop solution — CEO's 3-step structure (launch → branding → sell&scale) */
+/* 7-step pipeline — sourcing → settlement (matches CEO infographic) */
 const FLOW = [
-  {no:"01",ico:"🛂",t:{ko:"현지 진입",en:"Market Entry"},tag:{ko:"사업성 검토부터 인증·통관까지",en:"From feasibility to certification & customs"},
-   subs:{ko:["현지 사업성·시장성 검토","화장품·식품 성분 인증 (DAV·VFA)","제품 수출입·통관 대행"],en:["Market feasibility review","Cosmetic/food ingredient certification (DAV·VFA)","Import/export & customs clearance"]}},
-  {no:"02",ico:"✨",t:{ko:"현지 최적화 브랜딩",en:"Localized Branding"},tag:{ko:"원소스 멀티유즈 · 1셀럽 + 인플루언서 풀",en:"One-source multi-use · celeb + influencer pool"},
-   subs:{ko:["셀럽·메가 인플루언서 마케팅","콘텐츠 기획·제작 (원소스 멀티유즈)","언론·SNS 통합 홍보"],en:["Celebrity & mega-influencer marketing","Content production (one-source multi-use)","Press & social PR"]}},
-  {no:"03",ico:"💰",t:{ko:"유통·판매·수익화",en:"Sell & Scale"},tag:{ko:"팔고 · 보관·배송하고 · 정산까지",en:"Sell, store, ship and settle"},
-   subs:{ko:["라이브커머스·공동구매·쇼핑몰 운영","베트남 유통·3PL 물류 연계","매출 정산·C/S"],en:["Live commerce, group-buy & malls","Vietnam distribution & 3PL logistics","Revenue settlement & CS"]}}
+  {no:"01",ico:"🔎",t:{ko:"사전 컨설팅 및 계약",en:"Consulting & Contract"},d:{ko:"동남아 진출 타당성 분석 및 파트너 매칭 후 계약 체결",en:"Feasibility analysis, partner matching and contract"}},
+  {no:"02",ico:"✅",t:{ko:"현지 인허가 대행",en:"Certification & Licensing"},d:{ko:"전 품목 맞춤형 법규 분석 및 인허가(DAV·VFA) 절차 대행",en:"Tailored regulatory review & licensing (DAV·VFA)"}},
+  {no:"03",ico:"⭐",t:{ko:"인플루언서 매칭",en:"Influencer Matching"},d:{ko:"브랜드에 최적화된 셀럽·인플루언서 큐레이션 및 매칭",en:"Curated celebrity/influencer matching for the brand"}},
+  {no:"04",ico:"🎬",t:{ko:"맞춤형 콘텐츠 제작",en:"Content Production"},d:{ko:"현지 시장 트렌드를 반영한 고퀄리티 맞춤 콘텐츠 기획·제작",en:"High-quality localized content planning & production"}},
+  {no:"05",ico:"📡",t:{ko:"라이브 방송 송출",en:"Live Broadcasting"},d:{ko:"지역별 채널 활용 및 실시간 라이브커머스 운영 관리",en:"Channel-by-channel live commerce operations"}},
+  {no:"06",ico:"🛒",t:{ko:"유통 및 판매",en:"Distribution & Sales"},d:{ko:"최적의 온·오프라인 유통 채널 확보 및 3PL 물류·판매 확대",en:"Optimal on/offline distribution, 3PL logistics & sales"}},
+  {no:"07",ico:"💰",t:{ko:"투명한 성과 정산",en:"Transparent Settlement"},d:{ko:"실시간 판매 데이터 기반의 투명하고 정확한 매출 정산",en:"Transparent, accurate settlement on real-time sales data"}}
 ];
 
 /* Partnership proposal */
@@ -178,15 +181,17 @@ const I18N_EXTRA = {
     "team.ceo":"CEO & CMO","team.sales":"Sales Director",
     "biz.title":"사업자 정보","biz.regno":"사업자등록번호","biz.addr":"주소","biz.tel":"연락처","biz.email":"이메일","biz.rep":"대표","biz.item":"업종","biz.item.v":"경영컨설팅업 · 광고대행업",
     "infl.viewvideo":"대표 영상 보기",
-    "content.title":"우리가 만드는 콘텐츠","content.sub":"영웨이브가 직접 제작·기획한 콘텐츠 — 카드를 누르면 YouTube에서 재생됩니다.",
+    "content.title":"우리가 만든 결과물","content.sub":"영웨이브가 직접 기획·제작한 콘텐츠입니다. 카드를 누르면 YouTube에서 재생됩니다.",
     "proj.title":"주요 프로젝트","proj.sub":"드라마·뮤직비디오·관광 CF·글로벌 컨퍼런스까지, 결과로 증명합니다.",
     "clients.title":"클라이언트","clients.sub":"정부 기관부터 글로벌 미디어까지 신뢰받는 파트너.","clients.gov":"정부·지자체","clients.media":"방송·미디어","clients.ent":"엔터·프로덕션",
     "why.title":"왜 영웨이브인가","why.sub":"단순 캠페인 실행이 아닌, 아세안 시장의 전략적 파트너가 됩니다.",
     "lead.title":"리더십 & 팀","lead.sub":"베트남 본사 16명 · 한국 지사 3명, 이중언어 전문가 팀.",
     "ceo.b1":"동남아 셀럽·메가 인플루언서 네트워크 보유","ceo.b2":"한-아세안 통합 마케팅·콘텐츠 제작 전문","ceo.b3":"베트남 법인 운영 · 코스메틱 인증·유통 실무",
     "hero.fs":"동남아 인플루언서 커머스 · 풀스택 컴퍼니","hero.chainplus":"+ 화장품 인증 · 통관 · 물류",
-    "sys.kicker":"ONE-STOP SOLUTION","sys.title":"베트남 런칭부터 스케일까지, 원스톱","sys.sub":"1셀럽 + 인플루언서 풀로 브랜드의 현지 진입 · 브랜딩 · 판매 · 수익화까지 하나의 흐름으로 완성합니다. 브랜드는 맡기기만 하세요.",
-    "prop.kicker":"PARTNERSHIP","prop.title":"그래서, 우리와 어떤 일을 함께할까요?","prop.sub":"브랜드를 알려주시면 아세안 진출 종합 솔루션을 제안드립니다.","prop.brands":"이런 브랜드와 함께합니다","prop.offer":"우리가 제공하는 것","prop.cta":"제휴 제안 받기"
+    "sys.kicker":"SOURCING → SETTLEMENT","sys.title":"소싱부터 정산까지, 글로벌 커머스의 통합 솔루션 파트너",
+    "sys.p1":"동남아 시장, 팔기 전에 팔 수 있어야 합니다.","sys.p2":"우리는 광고를 파는 게 아닙니다.","sys.p3":"브랜드의 동남아 매출을 만듭니다.",
+    "sys.band":"따로따로 관리하던 복잡한 해외 판매 7단계를 하나의 파이프라인으로. 과정은 단순하게, 결과는 매출로.",
+    "prop.kicker":"PARTNERSHIP","prop.title":"그래서, 우리와 무엇을 함께할 수 있을까요?","prop.sub":"브랜드만 알려주세요. 동남아 진출 종합 솔루션으로 답하겠습니다.","prop.brands":"이런 브랜드와 함께합니다","prop.offer":"우리가 제공하는 것","prop.cta":"제휴 제안 받기"
   },
   en:{
     "hero.kicker":"ASIA INFLUENCE NETWORK",
@@ -205,7 +210,9 @@ const I18N_EXTRA = {
     "lead.title":"Leadership & Team","lead.sub":"16 in Vietnam HQ · 3 in Korea branch — a bilingual team of specialists.",
     "ceo.b1":"An extensive network of SEA celebrities & mega-influencers","ceo.b2":"Specialists in Korea–ASEAN integrated marketing & content","ceo.b3":"Runs a Vietnam entity — hands-on cosmetics certification & distribution",
     "hero.fs":"SEA INFLUENCER-COMMERCE · FULL-STACK COMPANY","hero.chainplus":"+ Certification · Customs · Logistics",
-    "sys.kicker":"ONE-STOP SOLUTION","sys.title":"From Vietnam launch to scale — one stop","sys.sub":"With one celebrity plus an influencer pool, we build your market entry, branding, sales and revenue in a single flow. Just hand it to us.",
+    "sys.kicker":"SOURCING → SETTLEMENT","sys.title":"From sourcing to settlement — your integrated global-commerce partner",
+    "sys.p1":"In Southeast Asia, before you sell, you must be able to sell.","sys.p2":"We don't sell ads.","sys.p3":"We build the brand's Southeast Asia revenue.",
+    "sys.band":"Seven scattered cross-border sales steps, unified into one pipeline. Simpler operations, stronger revenue.",
     "prop.kicker":"PARTNERSHIP","prop.title":"So, what can we build together?","prop.sub":"Tell us your brand — we'll propose a full ASEAN go-to-market solution.","prop.brands":"Brands we partner with","prop.offer":"What we provide","prop.cta":"Request a proposal"
   },
   vi:{
