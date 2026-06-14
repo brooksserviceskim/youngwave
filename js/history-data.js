@@ -265,3 +265,14 @@ const STUDIO_I18N={
  }
 };
 if(typeof I18N!=='undefined'){for(const l in STUDIO_I18N){I18N[l]=Object.assign(I18N[l]||{},STUDIO_I18N[l]);}}
+
+/* Partners subhead (관계사 — 콘텐츠·미디어 그룹) */
+const PARTSUB_I18N={
+ ko:{"partners.morehead":"콘텐츠·미디어 파트너"},
+ en:{"partners.morehead":"Content & Media Partners"},
+ vi:{"partners.morehead":"Đối tác nội dung & truyền thông"},
+ th:{"partners.morehead":"พันธมิตรคอนเทนต์·สื่อ"},
+ id:{"partners.morehead":"Mitra Konten & Media"},
+ zh:{"partners.morehead":"内容·媒体合作伙伴"}
+};
+if(typeof I18N!=='undefined'){for(const l in PARTSUB_I18N){I18N[l]=Object.assign(I18N[l]||{},PARTSUB_I18N[l]);}}
